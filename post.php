@@ -1,3 +1,7 @@
 <?php 
 session_start();
-echo "Post: " . $_SESSION['user'];
+if(isset($_SESSION['user'])){
+	echo "Post: " . $_SESSION['user'];
+}else{
+	echo "Post: No User Found";
+}

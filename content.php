@@ -1,3 +1,7 @@
 <?php 
 session_start();
-echo "Content:- " . $_SESSION['user'];
+if(isset($_SESSION['user'])){
+	echo "Content: " . $_SESSION['user'];
+}else{
+	echo "Content: No User Found";
+}
