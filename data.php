@@ -1,3 +1,7 @@
 <?php 
 session_start();
-echo "Data: " . $_SESSION['user'];
+if(isset($_SESSION['user'])){
+	echo "Data: " . $_SESSION['user'];
+}else{
+	echo "Data: No User Found";
+}
